@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--Main Navigation-->
+    <header>
+      <style>
+        #intro {
+          background-image: linear-gradient(65deg, #3a3d40 0%, #181719 100%);
+          height: 100vh;
+        }
+
+        /* Height for devices larger than 576px */
+        @media (min-width: 992px) {
+          #intro {
+            margin-top: -58.59px;
+          }
+        }
+
+        .navbar .nav-link {
+          color: black !important;
+        }
+      </style>
+
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-expand-lg navbar-dark d-none d-lg-block"
+        style="z-index: 2000; background-color: rgb(153, 133, 80)"
+        
+      >
+        <div class="container-fluid">
+          <!-- Navbar brand -->
+          <a class="navbar-brand nav-link" aria-disabled="">
+            <strong>Accurate Weather</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarExample01"
+            aria-controls="navbarExample01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarExample01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" aria-current="page" href="#personal-info"
+                  >Get Started</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#why-us"
+                  rel="nofollow"
+                  target="_self"
+                  >Why Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#how-it-works"
+                  target="_self"
+                  >How It Works</a
+                >
+              </li>
+            </ul>
+
+            <ul class="navbar-nav d-flex flex-row">
+              <!-- Icons -->
+              <li class="nav-item me-3 me-lg-0">
+                <a
+                  class="nav-link"
+                  href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
+                  rel="nofollow"
+                  target="_blank"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              <li class="nav-item me-3 me-lg-0">
+                <a
+                  class="nav-link"
+                  href="https://www.facebook.com/mdbootstrap"
+                  rel="nofollow"
+                  target="_blank"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="nav-item me-3 me-lg-0">
+                <a
+                  class="nav-link"
+                  href="https://twitter.com/MDBootstrap"
+                  rel="nofollow"
+                  target="_blank"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="nav-item me-3 me-lg-0">
+                <a
+                  class="nav-link"
+                  href="https://github.com/mdbootstrap/mdb-ui-kit"
+                  rel="nofollow"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+
+      <!-- Background image -->
+     
+      <!-- Background image -->
+    </header>
+    <!--Main Navigation-->
+    <!--Main layout-->
+    <div id="weatherbar"></div>
+    <main class="pt-1" style="background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);">
+     
+      <div class="container">
+        <div class="weather-input">
+          <h3 class="mt-3 ms-4">Enter a City Name</h3>
+          <input class="city-input w-50 form-control btn-black" type="text" placeholder="Enter a City Name">
+          <button class="search-btn w-50 mb-4 btn btn-dark">Search</button>
+          <div class="separator w-50 mt-0"></div>
+          <button class="location-btn w-50 btn-success ">Use Current Location</button>
+        </div>
+        <div class="weather-data">
+          <div class="current-weather">
+            <div class="details">
+              <h2 style="padding-right: 10px;">_______ ( ______ ) </h2>
+              <h6 style="padding-right: 10px;">Temperature: __°C</h6>
+              <h6 style="padding-right: 10px;">Wind: __ KM/H</h6>
+              <h6 style="padding-right: 10px;">Humidity: __%</h6>
+            </div>
+          </div>
+          <div class="days-forecast">
+            <h2>5-Day Forecast</h2>
+            <ul class="weather-cards" style="padding-left: 0px;">
+              <li class="card">
+                <h3>( ______ )</h3>
+                <h6>Temp: __C</h6>
+                <h6>Wind: __ KM/H</h6>
+                <h6>Humidity: __%</h6>
+              </li>
+              <li class="card">
+                <h3>( ______ )</h3>
+                <h6>Temp: __C</h6>
+                <h6>Wind: __ KM/H</h6>
+                <h6>Humidity: __%</h6>
+              </li>
+              <li class="card">
+                <h3>( ______ )</h3>
+                <h6>Temp: __C</h6>
+                <h6>Wind: __ KM/H</h6>
+                <h6>Humidity: __%</h6>
+              </li>
+              <li class="card">
+                <h3>( ______ )</h3>
+                <h6>Temp: __C</h6>
+                <h6>Wind: __ KM/H</h6>
+                <h6>Humidity: __%</h6>
+              </li>
+              <li class="card">
+                <h3>( ______ )</h3>
+                <h6>Temp: __C</h6>
+                <h6>Wind: __ KM/H</h6>
+                <h6>Humidity: __%</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-5" />
+
+        <!--Section: Content-->
+        <section class="text-center">
+          <h4 class="mb-5  text-warning" id="why-us" style="font-size: 30px;"><strong>Why Us</strong></h4>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-zoom ripple"
+                  data-mdb-ripple-color="light"
+                >
+                  <img src="https://th.bing.com/th/id/OIP.7D55_0M7pxGxitizWuos0wAAAA?pid=ImgDet&rs=1" class="img-fluid" />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">100% Accuracy</h5>
+                  <p class="card-text">
+                    Our platform works with Multiple API's and takes the average of them to provide the most accurate weather conditions. Besides that we are working with experts under the hood which allows us to display the most accurate weather. 
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-zoom ripple"
+                  data-mdb-ripple-color="light"
+                >
+                  <img src="https://static.thenounproject.com/png/27823-200.png" class="img-fluid" />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Extreme Weathers</h5>
+                  <p class="card-text">
+                    Facing extreme weathers unexpectedly is a sad story. It might sometimes result in bad consequenses. When the user searches for their city if the weather is too high or too low they will be informed to take certain actions so that they wont end in problems.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-zoom ripple"
+                  data-mdb-ripple-color="light"
+                >
+                  <img src="img/images (1).png  " class="img-fluid" />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Extended Time-Period</h5>
+                  <p class="card-text">
+                   Sometimes the user wants to know the multiple weathers. We allow our users to check the other cities weather conditons without needing them to type the city name because its possible to see the city  they are searching for in the moving bar.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Section: Content-->
+      </div>
+      <hr class="container"/>
+      <section class="text-center pb-5" id="how-it-works">
+        <h4 class="pt-4 text-warning" style="font-size: 30px;"><strong>How It Works<strong></strong></h4>
+        <section id="features">
+          <div class="grid mt-4">
+            <div class="icon"><i class="ri-medal-fill"></i></div>
+            <div class="desc">
+              <h2>Working With Experts</h2>
+              <p>
+               We use one of the best API out there for weather calculation. Thus Our team works with scientists that have PHD"s on multiple majors which allows us to display most of the accurate weathers.
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="icon"><i class="ri-team-line"></i></div>
+            <div class="desc">
+              <h2>FeedBacks</h2>
+              <p>
+               We acquire informations from our users that helps us to inform the baseline level of accuracy of the daily temperatures therefor making our site more accureate.
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="icon">
+              <i class="ri-arrow-up-double-line"></i>
+            </div>
+            <div class="desc">
+              <h2>Extended Weather Period</h2>
+              <p>
+              Our API has stored almost an 8 decade of weather  information for each city.We constantly update the day when it passed by so you can check the weather conditions.   
+              </p>
+            </div>
+          </div>
+        </section>
+    </main>
+    <!--Main layout-->
+    <!--Footer-->
+    <footer class="bg-light text-lg-start border-2">
+      <!-- Copyright -->
+      <div
+        class="text-center p-1 pt-3 text-light"
+        style="background-color: rgb(100, 60, 48)"
+      >
+        © 2023 Copyright: All Rights Deserved
+        <p>*Accurate Weather Presents*</p>
+        <a class="text-dark"></a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!--Footer-->
+    <!-- MDB -->
+    
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/start.js"></script>
+  </body>
+</html>
